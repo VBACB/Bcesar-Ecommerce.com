@@ -1,0 +1,385 @@
+/* Resetear */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: 0.3s ;
+}
+/* ------- --------- ---------- --------  */
+/* ROOTS */
+:root{
+    --azul:#172856;
+    --amarillo:#e3a600;
+    --background:#e9eaf0;
+    --side-bar:#fff;
+    --amarillo_hover:#fcca3fcc;
+    --border_2:#e9eaf067;
+}
+/* ESTILOS GENERALES */
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.logo span{
+    color: var(--amarillo_hover);
+}
+section{
+    width: 85%;
+    margin: auto;
+}
+.btn{
+    position: absolute;
+    background-color: var(--amarillo);
+    padding: 10px 15px;
+    color: var(--azul);
+    font-weight: bold;
+    border: 2px solid var(--amarillo);
+}
+.btn:hover{
+    background-color: transparent;
+}
+/* ------  ------  -------  -------  ------ */
+body{
+    background-color: var(--background);
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+section .side-bar{
+    width: 25%;
+    background-color: var(--side-bar);
+    border-radius: 10px;
+}
+section .content{
+    background-color:var(--side-bar);
+    width: 72%;
+    border-radius: 10px;
+}
+header{
+    background-color: var(--azul);
+    margin-bottom: 30px;
+}
+header nav{
+    width: 85%;
+    margin: 0 auto;
+}
+header nav .logo-search{
+    height: 80px;
+    border-bottom: 1px solid var(--border_2);
+}
+header nav .logo-search .search-box{
+    width: 500px;
+    height: 40px;
+    position:relative;
+}
+header nav .logo-search .search-box input{
+    width: 100%;
+    height: 100%;
+    padding: 0 50px 0 12px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+header nav .logo-search .search-box i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    line-height: 40px;
+    color: var(--azul);
+    cursor: pointer;
+    text-align: center;
+}
+.icon a{
+    color: var(--side-bar);
+    margin-left: 10px;
+}
+.icon a:hover{
+    color: var(--amarillo_hover);
+}
+header nav ul li{
+    display: inline-block;
+    padding: 18px 0;
+    margin-right: 50px;
+    position: relative;
+}
+header nav ul li a{
+    color: var(--side-bar);
+    font-weight: bold;
+    letter-spacing: .9px;
+}
+header nav ul li a.in-on{
+    color: var(--amarillo);
+}
+header nav ul li a:hover{
+    color: var(--amarillo);
+}
+header nav ul li::after{
+    position: absolute;
+    content: '';
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 10px;
+    background-color: var(--side-bar);
+    clip-path: polygon(50% 40%, 0 100%, 100% 100%);
+}
+header nav ul li:hover::after,
+header nav ul li.active::after{
+    width: 12px;
+}
+/* Start hero */
+.hero .side-bar{
+    overflow: hidden;
+}
+.hero .side-bar h4{
+    padding: 20px;
+    background-color: var(--amarillo);
+    color: var(--azul);   
+}
+.hero .side-bar i{
+    margin-right: 10px;
+}
+.hero .side-bar ul li{
+    list-style: none;
+    color: var(--azul);
+    border-bottom: 1px solid var(--border_2);
+    cursor: pointer;
+    padding: 17px 20px;
+}
+.hero .side-bar ul li:hover{
+    background-color: var(--amarillo_hover);
+}
+.hero .side-bar ul li a{
+    color: var(--azul);
+}
+.hero .content{
+    background: linear-gradient(#0000007c, #0000007c), url(../imgs/clark-street-mercantile-qnKhZJPKFD8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.hero .content .div-text{
+    position: absolute;    
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+}
+.hero .content .div-text span{
+    color: var(--amarillo_hover);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.hero .content .div-text h1{
+    color: #fff;
+    font-size: 40px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+.hero .content .div-text p{
+    color: var(--border_2);
+    margin-bottom: 50px;
+    width: 450px;
+    letter-spacing: .9px;
+    line-height: 25px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border_2);
+    padding: 15px 20px;
+}
+.title h4{
+    color: var(--azul);
+    text-transform: uppercase;
+}
+.title a{
+    color: var(--amarillo);
+    font-weight: bold;
+}
+.all-items{
+   padding: 20px; 
+}
+.all-items>div{
+    margin: 0 20px;
+}
+.all-items .item{
+    width: 22%;
+}
+.div-img{
+   border-bottom: 2px solid var(--border_2);
+}
+.div-img img{
+    width: 100%;
+}
+.div-text a{
+    display: block;
+    margin: 15px 0 10px;
+    color: rgba(0, 0, 0, 0.705);
+}
+.div-text p{
+    color: #9999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.item .div-text .stars i{
+    color: var(--amarillo_hover);
+}
+.item .div-text .price{
+    margin-top: 10px;
+}
+.item .div-text .price span{
+    color: red;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0  25px 0 0;
+}
+.item .div-text .price del{
+    text-decoration: line-through;
+    font-style: italic;
+    color: var(--border_2);
+    margin-right: 40px;
+}
+/* sec - 2 */
+.sec-2 .side-bar img{
+    width: 320px;
+    text-align: center;
+}
+.sec-3 {
+    align-items: flex-start;
+}
+.sec-3 .side-bar .boxs {
+    padding: 0px 20px;
+}
+.sec-3 .side-bar .boxs .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border_2);
+    padding: 10px 0;
+}
+.sec-3 .side-bar .boxs .box:nth-child(4){
+    border: none;
+}
+.sec-3 .side-bar .boxs .box .div-text h4{
+    color:#171717;
+}
+.sec-3 .side-bar .boxs .box img{
+    width: 100px;
+}
+.sec-3 .side-bar .boxs .box .stars{
+    margin: 15px 0 20px;
+}
+.sec-3 .side-bar .boxs .box .stars i{
+    color: var(--amarillo_hover);
+}
+.sec-3 .side-bar .boxs .box .div-text span{
+    color: red;
+    font-weight: bold;
+}
+.sec-3 .content{
+    background-color: var(--border_2);
+}
+.sec-3 .content .bg-sec{
+    height: 250px;
+    background: linear-gradient(#0000007c, #00000041), url(../imgs/shoppingWomen/mujer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.sec-3 .content .bg-sec .div-text{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transition: translateY(-50%);
+}
+.sec-3 .content .bg-sec .div-text h1{
+    color: #fff;
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-size: 35px;
+}
+.sec-3 .content .bg-sec .div-text span{
+    color: var(--border_2);
+    font-size: 18px;
+}
+.sec-3 .all-items{
+    background-color: #fff;
+    border-radius: 10px;
+}
+footer{
+    background-color: var(--azul);
+    padding: 0  0 25px 0;
+}
+.footer .container{
+    width: 85%;
+    margin:  0 auto;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 25px;
+    border-bottom: 1px solid var(--border_2);
+}
+.row_item{
+    color: var(--border_2);
+}
+.row_item h5{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.row_item p{
+    margin-top: 10px;
+}
+.row_item input{
+    border: none;
+    outline: none;
+    padding: 13px 80px 13px 5px;
+}
+.links-social{
+    margin-top: 10px;
+}
+.links-social>a{
+    margin-right: 5px;
+}
+.links-social img{
+    width: 30px;
+    border-radius: 5px;
+}
+.row_2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.742);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+.row_3{
+    text-align: center;
+    color: #e9eaf038;
+    font-size: 12.5px;
+    margin-top: 25px;
+}
+.btn-footer{
+    right: 125px;
+}
